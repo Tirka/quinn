@@ -30,4 +30,3 @@ jobs:
           run: |
             freebsd-version
             $HOME/.cargo/bin/cargo build --all-targets
-            exit 101
