@@ -27,6 +27,7 @@ jobs:
             sh rustup.sh -y --profile minimal --default-toolchain stable
             echo "~~~~ rustc --version ~~~~"
             $HOME/.cargo/bin/rustc --version
-          run: |
             freebsd-version
-            $HOME/.cargo/bin/cargo build --all-targets
+          run: $HOME/.cargo/bin/cargo build --all-targets
+          run: $HOME/.cargo/bin/cargo test
+          run: $HOME/.cargo/bin/cargo test --manifest-path fuzz/Cargo.toml
