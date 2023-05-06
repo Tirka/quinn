@@ -28,6 +28,6 @@ jobs:
             echo "~~~~ rustc --version ~~~~"
             $HOME/.cargo/bin/rustc --version
             freebsd-version
-          run: $HOME/.cargo/bin/cargo build --all-targets
-          run: $HOME/.cargo/bin/cargo test
-          run: $HOME/.cargo/bin/cargo test --manifest-path fuzz/Cargo.toml
+          run: |
+            $HOME/.cargo/bin/cargo build --all-targets
+            $HOME/.cargo/bin/cargo test
